@@ -2,12 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Demo</title>
 </head>
 <body>
+<h1>WebSocket Demo</h1>
+<div>
+    <input type="text" id="messageInput" placeholder="Enter a message">
+    <button onclick="sendMessage()">Send</button>
+</div>
+<div id="messageContainer"></div>
 
+<script>
+    const userId = 4; // 在这里设置用户ID
 
+    const socket = new WebSocket(`ws://localhost:9092?userId=${userId}`);
 
+    socket.addEventListener('open', (event) => {
+        console.log('WebSocket connection established.');
+    });
 
+    socket.addEventListener('message', (event) => {
+        const messageContainer = document.getElementById('messageContainer');
+        messageContainer.innerHTML += `<p>${event.data}</p>`;
+    });
+
+    function sendMessage() {
+        const messageInput = document.getElementById('messageInput');
+        const message = messageInput.value;
+        socket.send(message);
+        messageInput.value = '';
+    }
+</script>
 </body>
 </html>

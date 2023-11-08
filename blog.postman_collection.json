@@ -1,0 +1,3122 @@
+{
+	"info": {
+		"_postman_id": "36e45315-1bf3-4df3-bfa3-3cf470a6b523",
+		"name": "blog",
+		"description": "接口名字后面的-a，-a-n含义  \n\\-a表示只有管理员可以操作的\n\n\\-a-n表示普通用户和管理员操作结果有区别的",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19744296",
+		"_collection_link": "https://lively-escape-217061.postman.co/workspace/Team-Workspace~73998686-b69c-4b4e-8f61-9dc0aba084e7/collection/19744296-36e45315-1bf3-4df3-bfa3-3cf470a6b523?action=share&source=collection_link&creator=19744296"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "habits",
+					"item": [
+						{
+							"name": "createHabit",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tagId\":4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}user/createHabit",
+									"host": [
+										"{{local_url}}user"
+									],
+									"path": [
+										"createHabit"
+									],
+									"query": [
+										{
+											"key": "tagId",
+											"value": "5",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "createHabit",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tagId\":4\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local_url}}user/createHabit",
+											"host": [
+												"{{local_url}}user"
+											],
+											"path": [
+												"createHabit"
+											],
+											"query": [
+												{
+													"key": "tagId",
+													"value": "5",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "33"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"21-z+zYBYqVTaAlmAv0sa3u056Ogcc\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 03 Sep 2023 07:03:23 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"msg\": \"添加成功\"\n}"
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}user/deleteHabit?tagId=4",
+									"host": [
+										"{{local_url}}user"
+									],
+									"path": [
+										"",
+										"deleteHabit"
+									],
+									"query": [
+										{
+											"key": "tagId",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{local_url}}user/deleteHabit?tagId=4",
+											"host": [
+												"{{local_url}}user"
+											],
+											"path": [
+												"",
+												"deleteHabit"
+											],
+											"query": [
+												{
+													"key": "tagId",
+													"value": "4"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "33"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"21-UU75F8zB8xcPXkFa6vm2ds2Bw7o\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 03 Sep 2023 07:54:54 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"msg\": \"删除成功\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "registerCode",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userEmail\":\"2283479521@qq.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}user/registerCode",
+							"host": [
+								"{{local_url}}user"
+							],
+							"path": [
+								"registerCode"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "registerCode",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userEmail\":\"2283479521@qq.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}user/registerCode",
+									"host": [
+										"{{local_url}}user"
+									],
+									"path": [
+										"registerCode"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "238"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ee-nvStXNpRrZZh9J0akmSBxbX9FZ8\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Sep 2023 07:04:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjIyODM0Nzk1MjFAcXEuY29tIiwiY29kZSI6Ijc4MTU2NiIsImV4cCI6MTY5MzU1MjE4MjE2OSwiaWF0IjoxNjkzNTUxODgyfQ.a_hWhkxhXtmaQxPR5HtuQ6gV4Y6p0qEI9vW2-mWeMug\",\n    \"message\": \"发送成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userEmail\": \"2283479521@qq.com\",\r\n    \"username\": \"wenyi\",\r\n    \"password\": \"111111\",\r\n    \"code\":\"218892\",\r\n    \"codeToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjIyODM0Nzk1MjFAcXEuY29tIiwiY29kZSI6IjA0MzcxOCIsImV4cCI6MTY5MzU1MTYyMTcwNSwiaWF0IjoxNjkzNTUxMzIxfQ.djEXtJzb_pPVHMSMjK6iogMaP8D-2RNlRZpny9JwrwE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}user/register",
+							"host": [
+								"{{local_url}}user"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userEmail\":\"2283479521@qq.com\",\r\n    \"password\": \"111111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}user/login",
+							"host": [
+								"{{local_url}}user"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userEmail\":\"2283479521@qq.com\",\r\n    \"password\": \"111111\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}user/login",
+									"host": [
+										"{{local_url}}user"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "188"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bc-8x0sFmcLOaI5bnhPn2jK/X2pfzA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Aug 2023 11:07:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"登录成功\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cGlyZXNJbiI6ODY0MDAsImlhdCI6MTY5MzIyMDg1N30.Yvyx1j26qPBMtfGKL7sgcq3XVSm6qwbEKu03QhLvfSM\"\n}"
+						},
+						{
+							"name": "admin-login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"useremail\":\"admin@qq.com\",\r\n    \"password\": \"111111\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}user/login",
+									"host": [
+										"{{local_url}}user"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "188"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bc-97ti+ybte0G3Chu4LjfXHtszr4o\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Aug 2023 01:37:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"登录成功\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImV4cGlyZXNJbiI6ODY0MDAsImlhdCI6MTY5MzQ0NTgyM30.qFZteazK9vbTaCXGvUsEsJUpz3zgX8C67tFhUNAIK24\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"weny1i01\",\r\n    \"intro\":\"我是文艺\",\r\n    \"ins\":\"kimjisoofans\",\r\n    \"avatar\":\"https://fox-1314633748.cos.ap-chengdu.myqcloud.com/img%2F202308290941234.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}user/update",
+							"host": [
+								"{{local_url}}user"
+							],
+							"path": [
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"weny1i01\",\r\n    \"intro\":\"我是文艺\",\r\n    \"ins\":\"kimjisoofans\",\r\n    \"avatar\":\"https://fox-1314633748.cos.ap-chengdu.myqcloud.com/img%2F202308290941234.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}user/update",
+									"host": [
+										"{{local_url}}user"
+									],
+									"path": [
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a-u6KFIWnsx/1IEdXRJ30N+Qe/UnM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Sep 2023 09:12:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"更新成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getInfo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}user/getInfo",
+							"host": [
+								"{{local_url}}user"
+							],
+							"path": [
+								"getInfo"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getInfo",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}user/getInfo",
+									"host": [
+										"{{local_url}}user"
+									],
+									"path": [
+										"getInfo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "467"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d3-WTD0wQeIl7gb3VL6QPAghC5EVKk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 03 Sep 2023 01:51:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"查询成功！\",\n    \"data\": {\n        \"userId\": 1,\n        \"username\": \"weny1i01\",\n        \"userEmail\": \"2283479521@qq.com\",\n        \"password\": \"224442c26aea392b7bb682d4e128dc54\",\n        \"intro\": \"我是文艺\",\n        \"avatar\": \"https://fox-1314633748.cos.ap-chengdu.myqcloud.com/img%2F202308290941234.jpg\",\n        \"ins\": \"kimjisoofans\",\n        \"twitter\": null,\n        \"levelId\": 2,\n        \"userHabitCol\": {\n            \"habitCollectionId\": 1,\n            \"habits\": [\n                {\n                    \"habitId\": 1,\n                    \"tag\": {\n                        \"tagName\": \"测试\",\n                        \"tagId\": 1\n                    }\n                },\n                {\n                    \"habitId\": 2,\n                    \"tag\": {\n                        \"tagName\": \"前端\",\n                        \"tagId\": 8\n                    }\n                }\n            ]\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "changePwdCode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}user/changePwdCode",
+							"host": [
+								"{{local_url}}user"
+							],
+							"path": [
+								"changePwdCode"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}user/changePwdCode",
+									"host": [
+										"{{local_url}}user"
+									],
+									"path": [
+										"changePwdCode"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "238"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ee-8QcQPZAE6+hORcaUNDgeT7wpkzE\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Aug 2023 14:43:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjIyODM0Nzk1MjFAcXEuY29tIiwiY29kZSI6IjU5MDc0NiIsImV4cCI6MTY5MzIzNDcwOTY5MCwiaWF0IjoxNjkzMjMzODA5fQ.AUjEIWYses_CX0kyqWgOT4CBnrjn_5oUGmqt-LGPwHU\",\n    \"message\": \"发送成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "changePwd",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPwd\":111111,\r\n    \"newPwd\":1111111,\r\n    \"code\":\"632772\",\r\n    \"codeToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjIyODM0Nzk1MjFAcXEuY29tIiwiY29kZSI6IjYzMjc3MiIsImV4cCI6MTY5MzIzNDgzNDY2OCwiaWF0IjoxNjkzMjMzOTM0fQ.g0_QQESb3LNxLYJPacGajQ2aVLxG4ic1MsKuuV56BWY\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}user/changePwd",
+							"host": [
+								"{{local_url}}user"
+							],
+							"path": [
+								"changePwd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "changePwd",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"oldPwd\":111111,\r\n    \"newPwd\":1111111,\r\n    \"code\":\"632772\",\r\n    \"codeToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjIyODM0Nzk1MjFAcXEuY29tIiwiY29kZSI6IjYzMjc3MiIsImV4cCI6MTY5MzIzNDgzNDY2OCwiaWF0IjoxNjkzMjMzOTM0fQ.g0_QQESb3LNxLYJPacGajQ2aVLxG4ic1MsKuuV56BWY\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}user/changePwd",
+									"host": [
+										"{{local_url}}user"
+									],
+									"path": [
+										"changePwd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-9y94DJQsx5gjvkMXkxYal+tyLjk\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Aug 2023 14:52:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"修改成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getAll-n-a",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}user/getAll?username=\"we\"",
+							"host": [
+								"{{local_url}}user"
+							],
+							"path": [
+								"getAll"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "\"we\""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAll-n",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}user/getAll?username=we",
+									"host": [
+										"{{local_url}}user"
+									],
+									"path": [
+										"getAll"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "we"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "303"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12f-i8oKmALT2/N+IwNS8UeSG3nFfo0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 29 Aug 2023 13:01:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"userId\": 5,\n            \"username\": \"weny1i01\",\n            \"useremail\": \"2283479521@qq.com\",\n            \"password\": \"af634e7bfd4e05aeb01ca236fd479aa1\",\n            \"intro\": \"我是文艺\",\n            \"avatar\": \"https://fox-1314633748.cos.ap-chengdu.myqcloud.com/img%2F202308290941234.jpg\",\n            \"ins\": \"kimjisoofans\",\n            \"twitter\": null,\n            \"levelId\": 2\n        }\n    ],\n    \"total\": 1\n}"
+						},
+						{
+							"name": "getAll-a",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImV4cGlyZXNJbiI6ODY0MDAsImlhdCI6MTY5MzQ1ODMwOH0.52pbXygUr8bPVQXASamu6f-wPOOfC6iD7PY0aMyOZfU",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{local_url}}user/getAll",
+									"host": [
+										"{{local_url}}user"
+									],
+									"path": [
+										"getAll"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "we",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "383"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"17f-BxI845Hf2jUaNZbt0q82/LqKyJ8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Aug 2023 05:05:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"userId\": 6,\n            \"username\": \"admin\",\n            \"useremail\": \"admin@qq.com\",\n            \"password\": \"224442c26aea392b7bb682d4e128dc54\",\n            \"intro\": \"管理员\",\n            \"avatar\": null,\n            \"ins\": null,\n            \"twitter\": null,\n            \"levelId\": 1\n        },\n        {\n            \"userId\": 7,\n            \"username\": \"wenyi\",\n            \"useremail\": \"2283479521@qq.com\",\n            \"password\": \"224442c26aea392b7bb682d4e128dc54\",\n            \"intro\": null,\n            \"avatar\": null,\n            \"ins\": null,\n            \"twitter\": null,\n            \"levelId\": 2\n        }\n    ],\n    \"total\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}user/destroy",
+							"host": [
+								"{{local_url}}user"
+							],
+							"path": [
+								"destroy"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "destroy",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}user/destroy",
+									"host": [
+										"{{local_url}}user"
+									],
+									"path": [
+										"destroy"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a-JhOtxgOwjERsM8l91iJCIkYnyAE\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Aug 2023 11:11:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"注销成功\"\n}"
+						},
+						{
+							"name": "destroy",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{local_url}}user/destroy",
+									"host": [
+										"{{local_url}}user"
+									],
+									"path": [
+										"destroy"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3640"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e38-+sCT9BFi0hVqDLhd4t5mD+aeRRM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Aug 2023 02:34:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Error\\n    at Query.run (E:\\\\github\\\\blog\\\\back\\\\node_modules\\\\sequelize\\\\lib\\\\dialects\\\\mysql\\\\query.js:52:25)\\n    at E:\\\\github\\\\blog\\\\back\\\\node_modules\\\\sequelize\\\\lib\\\\sequelize.js:315:28\\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\\n    at async MySQLQueryInterface.select (E:\\\\github\\\\blog\\\\back\\\\node_modules\\\\sequelize\\\\lib\\\\dialects\\\\abstract\\\\query-interface.js:407:12)\\n    at async Function.findAll (E:\\\\github\\\\blog\\\\back\\\\node_modules\\\\sequelize\\\\lib\\\\model.js:1140:21)\\n    at async Object.deleteMyArticles (E:\\\\github\\\\blog\\\\back\\\\service\\\\articleService.js:64:26)\\n    at async Object.deleteUser (E:\\\\github\\\\blog\\\\back\\\\service\\\\userService.js:61:26)\\n    at async exports.destroy (E:\\\\github\\\\blog\\\\back\\\\controlloer\\\\userControlller.js:153:22) {\\n  name: 'SequelizeDatabaseError',\\n  parent: Error: Unknown column 'article.userId' in 'where clause'\\n      at Packet.asError (E:\\\\github\\\\blog\\\\back\\\\node_modules\\\\mysql2\\\\lib\\\\packets\\\\packet.js:728:17)\\n      at Query.execute (E:\\\\github\\\\blog\\\\back\\\\node_modules\\\\mysql2\\\\lib\\\\commands\\\\command.js:29:26)\\n      at Connection.handlePacket (E:\\\\github\\\\blog\\\\back\\\\node_modules\\\\mysql2\\\\lib\\\\connection.js:478:34)\\n      at PacketParser.onPacket (E:\\\\github\\\\blog\\\\back\\\\node_modules\\\\mysql2\\\\lib\\\\connection.js:97:12)\\n      at PacketParser.executeStart (E:\\\\github\\\\blog\\\\back\\\\node_modules\\\\mysql2\\\\lib\\\\packet_parser.js:75:16)\\n      at Socket.<anonymous> (E:\\\\github\\\\blog\\\\back\\\\node_modules\\\\mysql2\\\\lib\\\\connection.js:104:25)\\n      at Socket.emit (node:events:513:28)\\n      at addChunk (node:internal/streams/readable:315:12)\\n      at readableAddChunk (node:internal/streams/readable:289:9)\\n      at Socket.Readable.push (node:internal/streams/readable:228:10) {\\n    code: 'ER_BAD_FIELD_ERROR',\\n    errno: 1054,\\n    sqlState: '42S22',\\n    sqlMessage: \\\"Unknown column 'article.userId' in 'where clause'\\\",\\n    sql: 'SELECT `articleId`, `authorId`, `title`, `publishDate`, `contentFileId`, `coverImg`, `status`, `reason` FROM `article` AS `article` WHERE `article`.`userId` = 5;',\\n    parameters: undefined\\n  },\\n  original: Error: Unknown column 'article.userId' in 'where clause'\\n      at Packet.asError (E:\\\\github\\\\blog\\\\back\\\\node_modules\\\\mysql2\\\\lib\\\\packets\\\\packet.js:728:17)\\n      at Query.execute (E:\\\\github\\\\blog\\\\back\\\\node_modules\\\\mysql2\\\\lib\\\\commands\\\\command.js:29:26)\\n      at Connection.handlePacket (E:\\\\github\\\\blog\\\\back\\\\node_modules\\\\mysql2\\\\lib\\\\connection.js:478:34)\\n      at PacketParser.onPacket (E:\\\\github\\\\blog\\\\back\\\\node_modules\\\\mysql2\\\\lib\\\\connection.js:97:12)\\n      at PacketParser.executeStart (E:\\\\github\\\\blog\\\\back\\\\node_modules\\\\mysql2\\\\lib\\\\packet_parser.js:75:16)\\n      at Socket.<anonymous> (E:\\\\github\\\\blog\\\\back\\\\node_modules\\\\mysql2\\\\lib\\\\connection.js:104:25)\\n      at Socket.emit (node:events:513:28)\\n      at addChunk (node:internal/streams/readable:315:12)\\n      at readableAddChunk (node:internal/streams/readable:289:9)\\n      at Socket.Readable.push (node:internal/streams/readable:228:10) {\\n    code: 'ER_BAD_FIELD_ERROR',\\n    errno: 1054,\\n    sqlState: '42S22',\\n    sqlMessage: \\\"Unknown column 'article.userId' in 'where clause'\\\",\\n    sql: 'SELECT `articleId`, `authorId`, `title`, `publishDate`, `contentFileId`, `coverImg`, `status`, `reason` FROM `article` AS `article` WHERE `article`.`userId` = 5;',\\n    parameters: undefined\\n  },\\n  sql: 'SELECT `articleId`, `authorId`, `title`, `publishDate`, `contentFileId`, `coverImg`, `status`, `reason` FROM `article` AS `article` WHERE `article`.`userId` = 5;',\\n  parameters: {}\\n}\"\n}"
+						}
+					]
+				},
+				{
+					"name": "{{local_url}}user/getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}user/getAll",
+							"host": [
+								"{{local_url}}user"
+							],
+							"path": [
+								"getAll"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "we",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "getAll接口，管理员可以查询到所有，普通用户只能查询到普通用户"
+		},
+		{
+			"name": "tag",
+			"item": [
+				{
+					"name": "create-a",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}tag/create",
+							"host": [
+								"{{local_url}}tag"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tagname\":\"test\",\r\n    \"faTagId\":2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}tag/create",
+									"host": [
+										"{{local_url}}tag"
+									],
+									"path": [
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25-fCvKZEbzoMHWsZZypnsOe6gdxQY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 29 Aug 2023 04:42:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"新增成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete-a",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"tagId\":2}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}tag/delete",
+							"host": [
+								"{{local_url}}tag"
+							],
+							"path": [
+								"delete"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"tagId\":14}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}tag/delete",
+									"host": [
+										"{{local_url}}tag"
+									],
+									"path": [
+										"delete"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25-L+YkFj0nKFODZSF18x7AbxG3BgA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 29 Aug 2023 11:58:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"删除成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update-a",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tagname\":\"zcl\",\r\n    \"tagId\":8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}tag/update",
+							"host": [
+								"{{local_url}}tag"
+							],
+							"path": [
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tagname\":\"zcl\",\r\n    \"tagId\":8\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}tag/update",
+									"host": [
+										"{{local_url}}tag"
+									],
+									"path": [
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25-UsyBZjTUlbke++Tk3/4OxZKj19M\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 29 Aug 2023 06:07:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"更新成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}tag/getAll?tagname=1",
+							"host": [
+								"{{local_url}}tag"
+							],
+							"path": [
+								"getAll"
+							],
+							"query": [
+								{
+									"key": "tagname",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAll",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}tag/getAll",
+									"host": [
+										"{{local_url}}tag"
+									],
+									"path": [
+										"getAll"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "334"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14e-KNBQ182/JHSejFwaJJ9Z4dTL17Q\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 29 Aug 2023 04:47:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"tagId\": 1,\n            \"tagname\": \"前端\",\n            \"faTagId\": null\n        },\n        {\n            \"tagId\": 2,\n            \"tagname\": \"后端\",\n            \"faTagId\": null\n        },\n        {\n            \"tagId\": 3,\n            \"tagname\": \"人工智能\",\n            \"faTagId\": null\n        },\n        {\n            \"tagId\": 4,\n            \"tagname\": \"c++\",\n            \"faTagId\": null\n        },\n        {\n            \"tagId\": 5,\n            \"tagname\": \"test\",\n            \"faTagId\": null\n        },\n        {\n            \"tagId\": 6,\n            \"tagname\": \"test\",\n            \"faTagId\": 1\n        },\n        {\n            \"tagId\": 7,\n            \"tagname\": \"test\",\n            \"faTagId\": 2\n        }\n    ]\n}"
+						},
+						{
+							"name": "getAll",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}tag/getAll?tagname=1",
+									"host": [
+										"{{local_url}}tag"
+									],
+									"path": [
+										"getAll"
+									],
+									"query": [
+										{
+											"key": "tagname",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "184"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b8-BHAlvnPrQ5fsP9XFpayW1+zFI+0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 29 Aug 2023 12:44:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"tagId\": 18,\n            \"tagName\": \"1\",\n            \"faTagId\": null,\n            \"depth\": 0\n        },\n        {\n            \"tagId\": 20,\n            \"tagName\": \"11111\",\n            \"faTagId\": 19,\n            \"depth\": 2\n        },\n        {\n            \"tagId\": 21,\n            \"tagName\": \"12342134\",\n            \"faTagId\": 20,\n            \"depth\": 3\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"description": "tag的增加修改和删除，只有管理员能操作，普通用户只能查询"
+		},
+		{
+			"name": "article",
+			"item": [
+				{
+					"name": "getAll-a-n",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "getAll-a-n",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}article/getAll",
+									"host": [
+										"{{local_url}}article"
+									],
+									"path": [
+										"getAll"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "422"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a6-rto/OIGxW9Ar5tsFA0ondvwWKys\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Aug 2023 10:33:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"articleId\": 51,\n            \"authorId\": 8,\n            \"title\": \"message1\",\n            \"publishDate\": \"2023-08-31T08:50:22.000Z\",\n            \"contentFileId\": 60,\n            \"coverImg\": \"\",\n            \"status\": 3,\n            \"reason\": \"\",\n            \"viewCount\": 2,\n            \"tags\": []\n        },\n        {\n            \"articleId\": 53,\n            \"authorId\": 8,\n            \"title\": \"典型文章测试\",\n            \"publishDate\": \"2023-08-31T09:23:00.000Z\",\n            \"contentFileId\": 62,\n            \"coverImg\": \"\",\n            \"status\": 3,\n            \"reason\": \"\",\n            \"viewCount\": 0,\n            \"tags\": [\n                {\n                    \"tagId\": 18,\n                    \"tagname\": \"1\",\n                    \"faTagId\": null\n                }\n            ]\n        }\n    ],\n    \"total\": 2\n}"
+						},
+						{
+							"name": "带参数",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}article/getAll?keyword=todo&tagId=6",
+									"host": [
+										"{{local_url}}article"
+									],
+									"path": [
+										"getAll"
+									],
+									"query": [
+										{
+											"key": "keyword",
+											"value": "todo"
+										},
+										{
+											"key": "tagId",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "250"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fa-oIYthksTkQI4W7d8zRIf/qpc1AM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 03 Sep 2023 09:52:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"articleId\": 2,\n            \"authorId\": 4,\n            \"title\": \"todo\",\n            \"publishDate\": \"2023-09-03T04:00:33.000Z\",\n            \"contentFileId\": 2,\n            \"coverImg\": \"\",\n            \"status\": 3,\n            \"reason\": \"\",\n            \"viewCount\": 2,\n            \"tags\": [\n                {\n                    \"tagId\": 6,\n                    \"tagName\": \"人工智能\",\n                    \"parentTagId\": null\n                }\n            ]\n        }\n    ],\n    \"total\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "/createByFile",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "createByFile",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/D:/OneDrive/OneDrive - zsk3507/桌面/todo.txt"
+										},
+										{
+											"key": "title",
+											"value": "todo",
+											"type": "text"
+										},
+										{
+											"key": "option",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local_url}}article/createByFile",
+									"host": [
+										"{{local_url}}article"
+									],
+									"path": [
+										"createByFile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-q88ct8ap/90IGxllsWZpYVg9ynA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 29 Aug 2023 15:00:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"上传成功\"\n}"
+						},
+						{
+							"name": "带参数",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/E:/github/blog/back/Sequelize.md"
+										},
+										{
+											"key": "title",
+											"value": "sequelize-发布版",
+											"type": "text"
+										},
+										{
+											"key": "option",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "tagArr[]",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "tagArr[]",
+											"value": "8",
+											"type": "text"
+										},
+										{
+											"key": "tagArr[]",
+											"value": "6",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local_url}}article/createByFile",
+									"host": [
+										"{{local_url}}article"
+									],
+									"path": [
+										"createByFile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-q88ct8ap/90IGxllsWZpYVg9ynA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 03 Sep 2023 08:10:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"上传成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "checkArticle-a-n",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"articleId\":48\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}article/check?articleId",
+							"host": [
+								"{{local_url}}article"
+							],
+							"path": [
+								"check"
+							],
+							"query": [
+								{
+									"key": "articleId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "check",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"articleId\":48\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}article/check?articleId",
+									"host": [
+										"{{local_url}}article"
+									],
+									"path": [
+										"check"
+									],
+									"query": [
+										{
+											"key": "articleId",
+											"value": null
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-nOFgbZvK3N36JrSMTdVTfaYoIQg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Aug 2023 01:29:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"提交成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "view",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"articleId\":51\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}article/view",
+							"host": [
+								"{{local_url}}article"
+							],
+							"path": [
+								"view"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "view",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"articleId\":51\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}article/view",
+									"host": [
+										"{{local_url}}article"
+									],
+									"path": [
+										"view"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-ko9OXMfkSbohFwpjtowvcK3aDOE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Aug 2023 08:50:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"更新成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getOwn",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "带参数",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}article/getOwn?keyword=测试",
+									"host": [
+										"{{local_url}}article"
+									],
+									"path": [
+										"getOwn"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "keyword",
+											"value": "测试"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "275"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"113-dHTBHRGM0cSzoUrcDMsRVrIWXv8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 03 Sep 2023 09:31:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"count\": 1,\n        \"rows\": [\n            {\n                \"articleId\": 1,\n                \"authorId\": 4,\n                \"title\": \"测试\",\n                \"publishDate\": \"2023-09-03T03:50:27.000Z\",\n                \"contentFileId\": 1,\n                \"coverImg\": \"\",\n                \"status\": 2,\n                \"reason\": \"[{\\\"imgRes\\\":[null,null,null,null,null,null,null,null,null,null]},{}]\",\n                \"viewCount\": 0,\n                \"tags\": []\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}article/count?start=2023-08-30&num=0",
+							"host": [
+								"{{local_url}}article"
+							],
+							"path": [
+								"count"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "2023-08-30"
+								},
+								{
+									"key": "num",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "count",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}article/count?start=2023-08-30&num=0",
+									"host": [
+										"{{local_url}}article"
+									],
+									"path": [
+										"count"
+									],
+									"query": [
+										{
+											"key": "start",
+											"value": "2023-08-30"
+										},
+										{
+											"key": "num",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1022"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3fe-7hwHwQ05QnLo8I9AxgblZov4qjg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 04 Sep 2023 02:43:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"total\": {\n                \"articleCount\": 0,\n                \"totalViews\": null\n            },\n            \"getRes\": [\n                {\n                    \"weekStartDate\": \"2023-08-28T00:00:00.000Z\",\n                    \"weekEndDate\": \"2023-08-29T00:00:00.000Z\",\n                    \"weeklyViews\": 0\n                },\n                {\n                    \"weekStartDate\": \"2023-08-29T00:00:00.000Z\",\n                    \"weekEndDate\": \"2023-08-30T00:00:00.000Z\",\n                    \"weeklyViews\": 0\n                },\n                {\n                    \"weekStartDate\": \"2023-08-30T00:00:00.000Z\",\n                    \"weekEndDate\": \"2023-08-31T00:00:00.000Z\",\n                    \"weeklyViews\": 0\n                },\n                {\n                    \"weekStartDate\": \"2023-08-31T00:00:00.000Z\",\n                    \"weekEndDate\": \"2023-09-01T00:00:00.000Z\",\n                    \"weeklyViews\": 0\n                },\n                {\n                    \"weekStartDate\": \"2023-09-01T00:00:00.000Z\",\n                    \"weekEndDate\": \"2023-09-02T00:00:00.000Z\",\n                    \"weeklyViews\": 0\n                },\n                {\n                    \"weekStartDate\": \"2023-09-02T00:00:00.000Z\",\n                    \"weekEndDate\": \"2023-09-03T00:00:00.000Z\",\n                    \"weeklyViews\": 0\n                },\n                {\n                    \"weekStartDate\": \"2023-09-03T00:00:00.000Z\",\n                    \"weekEndDate\": \"2023-09-04T00:00:00.000Z\",\n                    \"weeklyViews\": \"2\"\n                },\n                {\n                    \"weekStartDate\": \"2023-09-04T00:00:00.000Z\",\n                    \"weekEndDate\": \"2023-09-05T00:00:00.000Z\",\n                    \"weeklyViews\": \"0\"\n                },\n                {\n                    \"weekStartDate\": \"2023-09-05T00:00:00.000Z\",\n                    \"weekEndDate\": \"2023-09-06T00:00:00.000Z\",\n                    \"weeklyViews\": 0\n                }\n            ]\n        }\n    ],\n    \"msg\": \"查询成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}article/delete?articleId=1",
+							"host": [
+								"{{local_url}}article"
+							],
+							"path": [
+								"delete"
+							],
+							"query": [
+								{
+									"key": "articleId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}article/delete?articleId=1",
+									"host": [
+										"{{local_url}}article"
+									],
+									"path": [
+										"delete"
+									],
+									"query": [
+										{
+											"key": "articleId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-UU75F8zB8xcPXkFa6vm2ds2Bw7o\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 04 Sep 2023 04:46:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"删除成功\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "common",
+			"item": [
+				{
+					"name": "uploadFile",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "uploadFile",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/D:/OneDrive/OneDrive - zsk3507/图片/jisoo57iv7xa0zgx6fwnyurnwrtyxe.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local_url}}common/uploadFile",
+									"host": [
+										"{{local_url}}common"
+									],
+									"path": [
+										"uploadFile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "131"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"83-+Y6Ip95bQO1bRB3cU39RR3tYQOY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 29 Aug 2023 01:38:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"上传成功\",\n    \"data\": [\n        {\n            \"url\": \"http://localhost:3300/uploads/1693273082479-jisoo57iv7xa0zgx6fwnyurnwrtyxe.jpg\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "check",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://aip.baidubce.com/rest/2.0/solution/v1/article_censor/v2/user_defined?access_token",
+							"protocol": "https",
+							"host": [
+								"aip",
+								"baidubce",
+								"com"
+							],
+							"path": [
+								"rest",
+								"2.0",
+								"solution",
+								"v1",
+								"article_censor",
+								"v2",
+								"user_defined"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "access_token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://aip.baidubce.com/oauth/2.0/token?client_id=IC8IYZ2PiStsjCxfaAyvWBeh&client_secret=F9xtLrzhb9PfI1ntQNNYN1lqR8EqgS2K&grant_type=client_credentials",
+							"protocol": "https",
+							"host": [
+								"aip",
+								"baidubce",
+								"com"
+							],
+							"path": [
+								"oauth",
+								"2.0",
+								"token"
+							],
+							"query": [
+								{
+									"key": "client_id",
+									"value": "IC8IYZ2PiStsjCxfaAyvWBeh"
+								},
+								{
+									"key": "client_secret",
+									"value": "F9xtLrzhb9PfI1ntQNNYN1lqR8EqgS2K"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "https://aip.baidubce.com/oauth/2.0/token?client_id=IC8IYZ2PiStsjCxfaAyvWBeh&client_secret=F9xtLrzhb9PfI1ntQNNYN1lqR8EqgS2K&grant_type=client_credentials",
+									"protocol": "https",
+									"host": [
+										"aip",
+										"baidubce",
+										"com"
+									],
+									"path": [
+										"oauth",
+										"2.0",
+										"token"
+									],
+									"query": [
+										{
+											"key": "client_id",
+											"value": "IC8IYZ2PiStsjCxfaAyvWBeh"
+										},
+										{
+											"key": "client_secret",
+											"value": "F9xtLrzhb9PfI1ntQNNYN1lqR8EqgS2K"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-store"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Aug 2023 04:47:07 GMT"
+								},
+								{
+									"key": "P3p",
+									"value": "CP=\" OTI DSP COR IVA OUR IND COM \""
+								},
+								{
+									"key": "Server",
+									"value": "Apache"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "BAIDUID=A43D9E024A97EA401BB37D9D2E7FF96B:FG=1; expires=Thu, 31-Dec-37 23:55:55 GMT; max-age=2145916555; path=/; domain=.baidu.com; version=1"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"refresh_token\": \"25.80983ae8e687f8d2387afa02611eb1f5.315360000.2008730827.282335-38490955\",\n    \"expires_in\": 2592000,\n    \"session_key\": \"9mzdCPbprzsEwMt9xPQIX9CpZOq31ZACZqiw6bRCnPnWjI05+nlHRKEPkdog3h1YTx+HBElkVgnAl4lN6t5u67OyGOvsFw==\",\n    \"access_token\": \"24.32410c27d2a47fa2682e624f24077129.2592000.1695962827.282335-38490955\",\n    \"scope\": \"public brain_all_scope solution_face wise_adapt lebo_resource_base lightservice_public hetu_basic lightcms_map_poi kaidian_kaidian ApsMisTest_Test权限 vis-classify_flower lpq_开放 cop_helloScope ApsMis_fangdi_permission smartapp_snsapi_base smartapp_mapp_dev_manage iop_autocar oauth_tp_app smartapp_smart_game_openapi oauth_sessionkey smartapp_swanid_verify smartapp_opensource_openapi smartapp_opensource_recapi fake_face_detect_开放Scope vis-ocr_虚拟人物助理 idl-video_虚拟人物助理 smartapp_component smartapp_search_plugin avatar_video_test b2b_tp_openapi b2b_tp_openapi_online smartapp_gov_aladin_to_xcx\",\n    \"session_secret\": \"9519a7c3f2b4137e6c10ab686b06e141\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}comment/create",
+							"host": [
+								"{{local_url}}comment"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}comment/delete?id=1",
+							"host": [
+								"{{local_url}}comment"
+							],
+							"path": [
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}comment/delete?id=1",
+									"host": [
+										"{{local_url}}comment"
+									],
+									"path": [
+										"delete"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-UU75F8zB8xcPXkFa6vm2ds2Bw7o\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 03 Sep 2023 06:25:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"删除成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}comment/getAll?articleId=4Z",
+							"host": [
+								"{{local_url}}comment"
+							],
+							"path": [
+								"getAll"
+							],
+							"query": [
+								{
+									"key": "articleId",
+									"value": "4Z"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAll",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}comment/getAll?articleId=2",
+									"host": [
+										"{{local_url}}comment"
+									],
+									"path": [
+										"getAll"
+									],
+									"query": [
+										{
+											"key": "articleId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d-bWmp+rSDybvEiXgDEK1xaxpES+M\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 03 Sep 2023 06:35:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": \"[]\",\n    \"msg\": \"查询成功\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "message",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "getAll",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}message/getAll",
+									"host": [
+										"{{local_url}}message"
+									],
+									"path": [
+										"getAll"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4053"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fd5-EDZgn2arj6I7oNyxuWMWt5sic4Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 04 Sep 2023 07:22:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"查询成功\",\n    \"data\": [\n        {\n            \"id\": 3,\n            \"userId\": 4,\n            \"type\": 0,\n            \"content\": \"文章审核失败\",\n            \"status\": \"0\",\n            \"createTime\": \"2023-09-03T08:10:47.000Z\",\n            \"sendTime\": null,\n            \"articleId\": 4,\n            \"article\": {\n                \"articleId\": 4,\n                \"authorId\": 4,\n                \"title\": \"sequelize-发布版\",\n                \"publishDate\": \"2023-09-03T07:59:51.000Z\",\n                \"contentFileId\": 4,\n                \"coverImg\": \"\",\n                \"status\": 2,\n                \"reason\": \"[{\\\"imgRes\\\":[]},{}]\",\n                \"viewCount\": 0,\n                \"file\": {\n                    \"fileId\": 4,\n                    \"filename\": \"Sequelize.md\",\n                    \"filesize\": 23858,\n                    \"filepath\": \"E:/github/blog/back/upload/md/1693728359506-4Sequelize.md\",\n                    \"type\": 2\n                }\n            }\n        },\n        {\n            \"id\": 4,\n            \"userId\": 4,\n            \"type\": 0,\n            \"content\": \"文章审核失败\",\n            \"status\": \"0\",\n            \"createTime\": \"2023-09-03T08:10:47.000Z\",\n            \"sendTime\": null,\n            \"articleId\": 5,\n            \"article\": {\n                \"articleId\": 5,\n                \"authorId\": 4,\n                \"title\": \"sequelize-发布版\",\n                \"publishDate\": \"2023-09-03T08:10:47.000Z\",\n                \"contentFileId\": 5,\n                \"coverImg\": \"\",\n                \"status\": 2,\n                \"reason\": \"[{\\\"imgRes\\\":[]},{}]\",\n                \"viewCount\": 0,\n                \"file\": {\n                    \"fileId\": 5,\n                    \"filename\": \"Sequelize.md\",\n                    \"filesize\": 23858,\n                    \"filepath\": \"E:/github/blog/back/upload/md/1693728649466-4Sequelize.md\",\n                    \"type\": 2\n                }\n            }\n        },\n        {\n            \"id\": 5,\n            \"userId\": 4,\n            \"type\": 0,\n            \"content\": \"文章审核成功\",\n            \"status\": \"0\",\n            \"createTime\": \"2023-09-03T08:22:52.000Z\",\n            \"sendTime\": null,\n            \"articleId\": 7,\n            \"article\": {\n                \"articleId\": 7,\n                \"authorId\": 4,\n                \"title\": \"vue\",\n                \"publishDate\": \"2023-09-03T08:10:47.000Z\",\n                \"contentFileId\": 7,\n                \"coverImg\": \"\",\n                \"status\": 3,\n                \"reason\": \"\",\n                \"viewCount\": 0,\n                \"file\": {\n                    \"fileId\": 7,\n                    \"filename\": \"vue01.md\",\n                    \"filesize\": 1599,\n                    \"filepath\": \"E:/github/blog/back/upload/md/1693728950201-4vue01.md\",\n                    \"type\": 2\n                }\n            }\n        },\n        {\n            \"id\": 6,\n            \"userId\": 4,\n            \"type\": 0,\n            \"content\": \"文章审核失败\",\n            \"status\": \"0\",\n            \"createTime\": \"2023-09-03T08:22:52.000Z\",\n            \"sendTime\": null,\n            \"articleId\": 8,\n            \"article\": {\n                \"articleId\": 8,\n                \"authorId\": 4,\n                \"title\": \"VUE\",\n                \"publishDate\": \"2023-09-03T08:10:47.000Z\",\n                \"contentFileId\": 8,\n                \"coverImg\": \"\",\n                \"status\": 2,\n                \"reason\": \"[{\\\"imgRes\\\":[null]},{\\\"textRes\\\":[{\\\"msg\\\":\\\"存在恶意推广不合规\\\",\\\"conclusion\\\":\\\"不合规\\\",\\\"hits\\\":[{\\\"wordHitPositions\\\":[],\\\"probability\\\":1,\\\"datasetName\\\":\\\"百度默认文本反作弊库\\\",\\\"words\\\":[],\\\"details\\\":[\\\"联系方式-网址\\\"],\\\"modelHitPositions\\\":[[5,440,1]]}],\\\"subType\\\":4,\\\"conclusionType\\\":2,\\\"type\\\":12}]}]\",\n                \"viewCount\": 0,\n                \"file\": {\n                    \"fileId\": 8,\n                    \"filename\": \"vue-02.md\",\n                    \"filesize\": 535,\n                    \"filepath\": \"E:/github/blog/back/upload/md/1693729011696-4vue-02.md\",\n                    \"type\": 2\n                }\n            }\n        },\n        {\n            \"id\": 7,\n            \"userId\": 4,\n            \"type\": 0,\n            \"content\": \"文章审核成功\",\n            \"status\": \"0\",\n            \"createTime\": \"2023-09-03T09:15:45.000Z\",\n            \"sendTime\": null,\n            \"articleId\": 9,\n            \"article\": {\n                \"articleId\": 9,\n                \"authorId\": 4,\n                \"title\": \"VUE\",\n                \"publishDate\": \"2023-09-03T09:00:07.000Z\",\n                \"contentFileId\": 9,\n                \"coverImg\": \"\",\n                \"status\": 3,\n                \"reason\": \"\",\n                \"viewCount\": 0,\n                \"file\": {\n                    \"fileId\": 9,\n                    \"filename\": \"todo.txt\",\n                    \"filesize\": 1321,\n                    \"filepath\": \"E:/github/blog/back/upload/other/1693731994625-4todo.txt\",\n                    \"type\": 2\n                }\n            }\n        },\n        {\n            \"id\": 8,\n            \"userId\": 4,\n            \"type\": 0,\n            \"content\": \"文章审核成功\",\n            \"status\": \"0\",\n            \"createTime\": \"2023-09-04T01:05:03.000Z\",\n            \"sendTime\": null,\n            \"articleId\": 10,\n            \"article\": {\n                \"articleId\": 10,\n                \"authorId\": 4,\n                \"title\": \"测试数据\",\n                \"publishDate\": \"2023-09-04T01:05:03.000Z\",\n                \"contentFileId\": 10,\n                \"coverImg\": \"\",\n                \"status\": 3,\n                \"reason\": \"\",\n                \"viewCount\": 0,\n                \"file\": {\n                    \"fileId\": 10,\n                    \"filename\": \"todo.txt\",\n                    \"filesize\": 1321,\n                    \"filepath\": \"E:/github/blog/back/upload/other/1693789569676-4todo.txt\",\n                    \"type\": 2\n                }\n            }\n        },\n        {\n            \"id\": 9,\n            \"userId\": 4,\n            \"type\": 1,\n            \"content\": \"评论审核成功\",\n            \"status\": \"0\",\n            \"createTime\": \"2023-09-04T07:08:55.000Z\",\n            \"sendTime\": null,\n            \"articleId\": 3,\n            \"article\": {\n                \"articleId\": 3,\n                \"authorId\": 4,\n                \"title\": \"sequelize\",\n                \"publishDate\": \"2023-09-03T07:59:51.000Z\",\n                \"contentFileId\": 3,\n                \"coverImg\": \"\",\n                \"status\": 0,\n                \"reason\": null,\n                \"viewCount\": 0,\n                \"file\": {\n                    \"fileId\": 3,\n                    \"filename\": \"Sequelize.md\",\n                    \"filesize\": 23858,\n                    \"filepath\": \"E:/github/blog/back/upload/md/1693728242542-4Sequelize.md\",\n                    \"type\": 2\n                }\n            }\n        },\n        {\n            \"id\": 10,\n            \"userId\": 4,\n            \"type\": 1,\n            \"content\": \"评论审核成功\",\n            \"status\": \"0\",\n            \"createTime\": \"2023-09-04T07:11:04.000Z\",\n            \"sendTime\": null,\n            \"articleId\": 3,\n            \"article\": {\n                \"articleId\": 3,\n                \"authorId\": 4,\n                \"title\": \"sequelize\",\n                \"publishDate\": \"2023-09-03T07:59:51.000Z\",\n                \"contentFileId\": 3,\n                \"coverImg\": \"\",\n                \"status\": 0,\n                \"reason\": null,\n                \"viewCount\": 0,\n                \"file\": {\n                    \"fileId\": 3,\n                    \"filename\": \"Sequelize.md\",\n                    \"filesize\": 23858,\n                    \"filepath\": \"E:/github/blog/back/upload/md/1693728242542-4Sequelize.md\",\n                    \"type\": 2\n                }\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "readOne",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}message/readOne?id=4",
+							"host": [
+								"{{local_url}}message"
+							],
+							"path": [
+								"readOne"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "readOne",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}message/readOne?id=4",
+									"host": [
+										"{{local_url}}message"
+									],
+									"path": [
+										"readOne"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-ko9OXMfkSbohFwpjtowvcK3aDOE\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 04 Sep 2023 07:33:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"更新成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "readAll",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}message/readAll",
+							"host": [
+								"{{local_url}}message"
+							],
+							"path": [
+								"readAll"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "readAll",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}message/readAll",
+									"host": [
+										"{{local_url}}message"
+									],
+									"path": [
+										"readAll"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "4",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-ko9OXMfkSbohFwpjtowvcK3aDOE\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 04 Sep 2023 08:06:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"更新成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteOne",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}message/deleteOne?id=3",
+							"host": [
+								"{{local_url}}message"
+							],
+							"path": [
+								"deleteOne"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteOne",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}message/deleteOne?id=3",
+									"host": [
+										"{{local_url}}message"
+									],
+									"path": [
+										"deleteOne"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-UU75F8zB8xcPXkFa6vm2ds2Bw7o\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 04 Sep 2023 13:45:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"msg\": \"删除成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "实时推送",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImV4cGlyZXNJbiI6ODY0MDAsImlhdCI6MTY5NDMxNDczM30.po9mikl9Mp2B8F_jFSpGjVwGb5VbyKXK9LnK3-0-B6w",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local_url",
+			"value": "http://114.132.250.2:3000/api/"
+		}
+	]
+}
